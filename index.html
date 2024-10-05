@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ML Model Demo</h1>
+        </header>
+
+        <main>
+            <section class="model-info">
+                <h2>Model Information</h2>
+                <div id="modelDetails">
+                    <p>Model Name: TFLite Demo Model</p>
+                    <p>Version: 1.0</p>
+                    <p>Last Updated: <span id="lastUpdated"></span></p>
+                </div>
+            </section>
+
+            <section class="download-section">
+                <h2>Download Model</h2>
+                <a href="models/model_optimized.tflite" class="download-btn">
+                    Download TFLite Model
+                </a>
+                <p class="file-info">File size: <span id="fileSize"></span></p>
+            </section>
+
+            <section class="usage-guide">
+                <h2>Usage Guide</h2>
+                <pre><code id="codeExample">
+// DroidScript Example
+function OnStart() {
+    tf = app.CreateTensorflowLite("MyModel", "path_to_model.tflite");
+}
+                </code></pre>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
